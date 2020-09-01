@@ -157,7 +157,7 @@ async function drawScatterPlot() {
         .attr('y', d => (dimensions.boundedHeight / 2) * d.proportionFossil)
         .attr('fill', t.url())
 
-    svg.append('circle').style("fill", textures.url())
+    svg.append('circle').style("fill", t.url())
 
 
 
