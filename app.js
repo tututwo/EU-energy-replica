@@ -214,9 +214,22 @@ async function drawScatterPlot() {
     country.append('text')
         .attr('class', "title")
         .attr('x', dimensions.width * 0.5)
-        .attr('y', dimensions.height * 0.05)
-        .attr()
+        .attr('y', dimensions.height * 0.05-100)
+        .attr('font-size', 20)
+        .attr('font-weight', "bold")
+        .attr('text-anchor', 'middle')
         .text('How european countries generated electricity in 2018')
+     
+      svg.append('a')
+        .attr('href', 'https://ec.europa.eu/eurostat/statistics-explained/index.php/Electricity_generation_statistics_%E2%80%93_first_results#Electricity_supplied_to_the_market')
+        .attr('target', '_blank')
+        .style('pointer-events', 'initial')
+        .append("text")
+          .attr('x', 100)
+          .attr('y', dimensions.height)
+          .attr('font-size', 14)
+          .attr('text-anchor', 'start')
+          .text('Data: Eurostat')
 
 }
 
